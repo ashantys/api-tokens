@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('name');
             $table->unsignedBigInteger('serie_id'); // Foreign key column
             $table->foreign('serie_id')->references('id')->on('series');
-            $table->string('image');
+            $table->string('image_url');
             $table->text('description');
             $table->timestamps();
         });
