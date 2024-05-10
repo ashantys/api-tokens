@@ -18,6 +18,7 @@ return new class extends Migration
             $table->foreign('serie_id')->references('id')->on('series');
             $table->string('image_url');
             $table->text('description');
+            $table->uuid('token')->unique(); 
             $table->timestamps();
         });
     }

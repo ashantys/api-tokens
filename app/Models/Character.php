@@ -9,9 +9,9 @@ class Character extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['name', 'serie_id', 'image_url', 'description'];
+    protected $fillable = ['name', 'serie_id', 'image_url', 'description', 'token'];
 
-    public function moviesOrSeries()
+    public function series()
     {
         return $this->belongsToMany(Serie::class);
     }
